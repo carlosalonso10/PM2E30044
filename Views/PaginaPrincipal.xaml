@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E30044carlos.Views.PaginaPrincipal"
+              BackgroundColor ="#9CE492"
+             Title="Examen_Final">
+    
+    <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Limpiar" IconImageSource="restart_ico" Clicked="OnBtnLimpiarClicked"/>
+    </ContentPage.ToolbarItems>
+
+
+    <ScrollView>
+        <StackLayout Spacing="15" Padding="15">
+
+            <Frame Padding="0" WidthRequest="190" HeightRequest="250">
+                <StackLayout>
+                    <Image x:Name="imgFoto"
+                        Aspect="AspectFill"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand"
+                        HeightRequest="190"
+                        BackgroundColor="White"/>
+
+                    <Button ImageSource="photo_ico.png"
+                        Clicked="OnBtnFotoClicked"
+                            WidthRequest="200"
+                            HeightRequest="90"
+                            BackgroundColor="gray"
+                        CornerRadius="20"/>
+                </StackLayout>
+            </Frame>
+
+
+            <Frame Padding="0">
+                <StackLayout>
+                    <Label Text="Nota de Voz:" Margin="5, 5, 0, 0"/>
+                    <Button x:Name="btnBtnStartRecording"
+                         ImageSource="microphone_ico.png"
+                        Clicked="OnBtnStartRecordingClicked"
+                        CornerRadius="0"
+                        BackgroundColor="gray"
+                        VerticalOptions="End"/>
+                </StackLayout>
+            </Frame>
+
+
+            <Frame CornerRadius="10" Padding="5" HeightRequest="140">
+                <StackLayout>
+                    <Label Text="Ingrese la Descripcion de Nota de voz:" />
+                    <Editor x:Name="txtDescripcion" Keyboard="Chat" HeightRequest="120" TextColor="Black"/>
+                    
+                </StackLayout>
+            </Frame>
+
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Spacing="5"  Padding="0,0,0,60" >
+                <Button Text="Guardar Datos"
+                    Clicked="OnBtnGuardarClicked"
+                   BackgroundColor="gray"
+                    HorizontalOptions="FillAndExpand" />
+
+                <Button Text="Lista Notas Guardadas"
+                    Clicked="OnBtnListaClicked"
+                    BackgroundColor="gray"
+                    HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

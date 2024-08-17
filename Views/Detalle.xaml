@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E30044carlos.Views.Detalle"
+             BackgroundColor ="#ADE995"
+             Title="Detalle de la Nota">
+
+    <StackLayout Spacing="15" Padding="25,100,25,0" >
+
+        <Label x:Name="lblDescripcion" 
+               Text="{Binding Descripcion}"
+               HeightRequest="150" 
+               BackgroundColor="white" TextColor="Black"/>
+
+
+        <Button 
+            Text="Ver Imagen"
+            BackgroundColor="gray"
+            Clicked="OnBtnPictureClicked"/>
+
+
+        <Button 
+            Text="Reproducir Audio"
+            x:Name="btnPlay"
+            BackgroundColor="gray"
+            Clicked="OnBtnPlayClicked"/>
+
+
+        <Button 
+            Text="Actualizar"
+            BackgroundColor="gray"
+            Clicked="OnBtnEditClicked"/>
+
+
+        <Button 
+            Text="Eliminar"
+            BackgroundColor="gray"
+            Clicked="OnBtnDeleteClicked"/>
+
+
+    </StackLayout>
+</ContentPage>
